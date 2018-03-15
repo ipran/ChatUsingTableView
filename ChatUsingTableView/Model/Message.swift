@@ -8,6 +8,20 @@
 
 import UIKit
 
-class Message: NSObject {
+class Message: Base {
+    
+    var userId: String?
+    var userName: String?
+    var text: String?
+    var date: String?
+    
+    override init() {
+        super.init()
+    }
+    
+    init(_ values: Dictionary<String, Any>) {
+        super.init()
+        setValuesForKeys(values)
+    }
 
 }
